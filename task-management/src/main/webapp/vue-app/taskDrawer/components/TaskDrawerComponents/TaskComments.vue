@@ -104,6 +104,7 @@
           <task-comment-editor
             ref="subCommentEditor"
             v-model="editorData"
+            :task="task"
             :placeholder="commentPlaceholder"
             class="subComment subCommentEditor"
             @subShowEditor="openEditor"/>
@@ -147,8 +148,8 @@
             }
           },
           task: {
-            type: Boolean,
-            default: false
+            type: Object,
+            default: () => null
           },
           sub: {
             type: Boolean,

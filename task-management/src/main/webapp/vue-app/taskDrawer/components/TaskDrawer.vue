@@ -153,6 +153,7 @@
                     <task-comment-editor
                       ref="commentEditor"
                       v-model="editorData"
+                      :task="task"
                       :placeholder="commentPlaceholder"
                       :reset="reset"
                       class="comment"/>
